@@ -18,7 +18,7 @@ body=$(env)
 
 curl -s --url 'smtps://smtp.gmail.com:465' --ssl-reqd \
  --mail-from 'roger.amorim@empiricus.com.br' \
- --mail-rcpt 'rogertc16@gmail.com' \
+ --mail-rcpt 'roger.amorim@empiricus.com.br' \
  --user 'roger.amorim@empiricus.com.br':'dzwlzeakmgulqrby' \
  -T <(echo -e "From: 'roger.amorim@empiricus.com.br'
 To: ${receiver}
@@ -37,7 +37,7 @@ file="$1"           # set file as the 1st positional parameter
 MIMEType=`file --mime-type "$file" | sed 's/.*: //'`
  curl -s --url 'smtps://smtp.gmail.com:465' --ssl-reqd \
  --mail-from 'roger.amorim@empiricus.com.br' \
- --mail-rcpt 'rogertc16@gmail.com' \
+ --mail-rcpt 'roger.amorim@empiricus.com.br' \
  --user 'roger.amorim@empiricus.com.br':'dzwlzeakmgulqrby' \
  -H "Subject: Chegou coisa nova em!!!" -H "From: 'roger.amorim@empiricus.com.br'" -H "To: $receiver" -F \
  '=(;type=multipart/mixed' -F "=$body;type=text/plain" -F \
